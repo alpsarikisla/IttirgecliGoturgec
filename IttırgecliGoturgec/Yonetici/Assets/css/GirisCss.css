@@ -1,0 +1,81 @@
+﻿*, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Calibri;
+    background-image: url('../resim/login_bg.jpg');
+    background-size:100%;
+}
+
+.girisPanel {
+    width: 800px;
+    min-height: 400px;
+    border: 1px solid silver;
+    -webkit-box-shadow: 0px 0px 8px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 8px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 8px -2px rgba(0,0,0,0.75);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    color: dimgray;
+    background-color:white;
+}
+
+.solTaraf {
+    width: 380px;
+    float: left;
+}
+
+    .solTaraf img {
+        width: 380px;
+    }
+
+.sagTaraf {
+    width: 400px;
+    float: left;
+    padding: 40px 10px;
+}
+
+    .sagTaraf .baslik {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 900;
+    }
+
+    .sagTaraf .icerik {
+        margin-top: 20px;
+    }
+        .sagTaraf .icerik .hata {
+            background-color: #ffcece;
+            border: 1px solid #820b0b;
+            color: #820b0b;
+            padding: 12px;
+            border-radius: 7px;
+        }
+        .sagTaraf .icerik .satir {
+            margin-top: 10px;
+        }
+
+        .sagTaraf .icerik .metinKutu {
+            width: 380px;
+            font-size: 15pt;
+            padding: 7px;
+            margin-top: 10px;
+            border-radius: 7px;
+            border: 1px solid silver;
+            background-color:#e5e5e5;
+        }
+
+        .sagTaraf .icerik .girisButton {
+            border: 1px solid #40073d;
+            background-color: #690264;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display:block;
+            text-align:center;
+            font-size:13pt;
+            font-weight:900;
+            border-radius:7px;
+        }
