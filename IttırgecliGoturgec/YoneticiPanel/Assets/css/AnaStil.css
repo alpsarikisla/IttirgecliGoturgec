@@ -1,0 +1,61 @@
+﻿*, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Calibri;
+}
+
+.ustKisim {
+    min-height: 32px;
+    background-color: #690264;
+    color: white;
+    padding: 10px;
+}
+
+.logo {
+    width: 250px;
+    float: left;
+}
+
+.kullanicipanel {
+    width: 250px;
+    float: right;
+    padding: 5px;
+}
+
+    .kullanicipanel a {
+        color: white;
+    }
+
+.menu {
+    width: 250px;
+    padding: 10px;
+    min-height: 884px;
+    background-color: #eeeeee;
+    float: left;
+}
+
+    .menu ul {
+        list-style-type: none;
+        padding:0;margin:0;
+    }
+
+        .menu ul a {
+            color: #690264;
+            text-decoration: none;
+        }
+            .menu ul a li {
+                padding: 3px;
+                border-bottom: 1px solid #690264;
+            }
+            .menu ul a:hover li {
+               background-color:#c8c8c8;
+            }
+
+.icerik {
+    padding:20px;
+    width: 1000px;
+    float: left;
+}

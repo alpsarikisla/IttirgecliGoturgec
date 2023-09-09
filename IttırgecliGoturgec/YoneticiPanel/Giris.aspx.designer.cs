@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace IttırgecliGoturgec.Yonetici
+namespace IttırgecliGoturgec.YoneticiPanel
 {
 
 

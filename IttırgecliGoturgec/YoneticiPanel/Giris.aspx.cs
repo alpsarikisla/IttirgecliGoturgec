@@ -1,14 +1,17 @@
-﻿using System;
+﻿using DataAccessLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace IttırgecliGoturgec.Yonetici
+namespace IttırgecliGoturgec.YoneticiPanel
 {
     public partial class Giris : System.Web.UI.Page
     {
+        DataModel db = new DataModel();
         //Event(Olay) İşlem gerçekleştiğinde(Tetiklendiğinde yapılacak olanlar bu alana yazılır)
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -28,7 +31,25 @@ namespace IttırgecliGoturgec.Yonetici
             {
                 if (tb_isim.Text.Length >= 3)
                 {
-
+                    Yonetici y = db.YoneticiKontrol(tb_isim.Text, tb_sifre.Text);
+                    if (y != null)
+                    {
+                        if (y.Aktif)
+                        {
+                            Session["yon"] = y;//BOXING
+                            Response.Redirect("Anasayfa.aspx");
+                        }
+                        else
+                        {
+                            pnl_hata.Visible = true;
+                            lbl_hata.Text = "Hesabınız Yönetici TArafından Askıya Alınmıştır";
+                        }
+                    }
+                    else
+                    {
+                        pnl_hata.Visible = true;
+                        lbl_hata.Text = "Kullanıcı Bulunamadı. Kullanıcı Adı ve şifreyi kontrol ediniz";
+                    }
                 }
                 else
                 {

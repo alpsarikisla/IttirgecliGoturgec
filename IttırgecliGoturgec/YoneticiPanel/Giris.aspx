@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Giris.aspx.cs" Inherits="IttırgecliGoturgec.Yonetici.Giris" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Giris.aspx.cs" Inherits="IttırgecliGoturgec.YoneticiPanel.Giris" %>
+
 
 <!DOCTYPE html>
 
@@ -43,3 +44,4 @@
     </form>
 </body>
 </html>
+

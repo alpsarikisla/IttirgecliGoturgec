@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="YoneticiMaster.master.cs" Inherits="IttırgecliGoturgec.YoneticiPanel.YoneticiMaster1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Assets/css/AnaStil.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="ustKisim">
+            <div class="logo">
+                <h2>İttirgeçli Panel</h2>
+            </div>
+            <div class="kullanicipanel">
+                Merhaba &nbsp;
+                <asp:Label ID="lbl_kullanici" runat="server"></asp:Label>
+                |
+                <asp:LinkButton ID="lbtn_cikis" runat="server" OnClick="lbtn_cikis_Click">Çıkış</asp:LinkButton>
+            </div>
+        </div>
+        <div style="clear: both"></div>
+        <div>
+            <div class="menu">
+                <ul>
+                    <a href="Anasayfa.aspx">
+                        <li>Anasayfa</li>
+                    </a>
+                    <a href="Anasayfa.aspx">
+                        <li>Kategori Listele</li>
+                    </a>
+                    <a href="Anasayfa.aspx">
+                        <li>Kategori Ekle</li>
+                    </a>
+                    <a href="Anasayfa.aspx">
+                        <li>Makale Listele</li>
+                    </a>
+                    <a href="Anasayfa.aspx">
+                        <li>Makale Ekle</li>
+                    </a>
+                    <a href="Anasayfa.aspx">
+                        <li>Üyeler</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="icerik">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

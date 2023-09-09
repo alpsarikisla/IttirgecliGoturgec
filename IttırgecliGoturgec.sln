@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34003.232
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IttırgecliGoturgec", "IttırgecliGoturgec\IttırgecliGoturgec.csproj", "{5584FE20-A4F6-4C1C-8606-9C215DCB44D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{31752807-B1E9-4696-8241-2A683349F961}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5584FE20-A4F6-4C1C-8606-9C215DCB44D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5584FE20-A4F6-4C1C-8606-9C215DCB44D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5584FE20-A4F6-4C1C-8606-9C215DCB44D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31752807-B1E9-4696-8241-2A683349F961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31752807-B1E9-4696-8241-2A683349F961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31752807-B1E9-4696-8241-2A683349F961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31752807-B1E9-4696-8241-2A683349F961}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

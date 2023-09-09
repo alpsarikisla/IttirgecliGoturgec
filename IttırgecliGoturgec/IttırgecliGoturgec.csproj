@@ -68,18 +68,35 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
-    <Content Include="Yonetici\Assets\css\GirisCss.css" />
-    <Content Include="Yonetici\Assets\Resim\JB1z4UykFG.gif" />
-    <Content Include="Yonetici\Giris.aspx" />
+    <Content Include="YoneticiPanel\Anasayfa.aspx" />
+    <Content Include="YoneticiPanel\Giris.aspx" />
+    <Content Include="YoneticiPanel\Assets\css\AnaStil.css" />
+    <Content Include="YoneticiPanel\Assets\css\GirisCss.css" />
+    <Content Include="YoneticiPanel\Assets\Resim\JB1z4UykFG.gif" />
+    <Content Include="YoneticiPanel\Assets\Resim\login_bg.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Yonetici\Giris.aspx.cs">
+    <Compile Include="YoneticiPanel\Anasayfa.aspx.cs">
+      <DependentUpon>Anasayfa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YoneticiPanel\Anasayfa.aspx.designer.cs">
+      <DependentUpon>Anasayfa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YoneticiPanel\Giris.aspx.cs">
       <DependentUpon>Giris.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Yonetici\Giris.aspx.designer.cs">
+    <Compile Include="YoneticiPanel\Giris.aspx.designer.cs">
       <DependentUpon>Giris.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YoneticiPanel\YoneticiMaster.Master.cs">
+      <DependentUpon>YoneticiMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YoneticiPanel\YoneticiMaster.Master.designer.cs">
+      <DependentUpon>YoneticiMaster.Master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -90,8 +107,14 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="YoneticiPanel\YoneticiMaster.Master" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{31752807-b1e9-4696-8241-2a683349f961}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
