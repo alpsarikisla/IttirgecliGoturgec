@@ -29,10 +29,10 @@
                     <a href="Anasayfa.aspx">
                         <li>Anasayfa</li>
                     </a>
-                    <a href="Anasayfa.aspx">
+                    <a href="KategoriListele.aspx">
                         <li>Kategori Listele</li>
                     </a>
-                    <a href="Anasayfa.aspx">
+                    <a href="KategoriEkle.aspx">
                         <li>Kategori Ekle</li>
                     </a>
                     <a href="Anasayfa.aspx">

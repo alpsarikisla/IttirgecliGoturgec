@@ -42,7 +42,7 @@ namespace IttırgecliGoturgec.YoneticiPanel
                         else
                         {
                             pnl_hata.Visible = true;
-                            lbl_hata.Text = "Hesabınız Yönetici TArafından Askıya Alınmıştır";
+                            lbl_hata.Text = "Hesabınız yönetici tarafından askıya alınmıştır";
                         }
                     }
                     else

@@ -28,11 +28,11 @@
                     </asp:Panel>
                     <div class="satir">
                         <label>Kullanıcı Adı</label><br />
-                        <asp:TextBox ID="tb_isim" runat="server" CssClass="metinKutu"></asp:TextBox>
+                        <asp:TextBox ID="tb_isim" runat="server" CssClass="metinKutu" Text="Alpod"></asp:TextBox>
                     </div>
                     <div class="satir">
                         <label>Şifre</label><br />
-                        <asp:TextBox ID="tb_sifre" runat="server" CssClass="metinKutu" TextMode="Password"></asp:TextBox>
+                        <asp:TextBox ID="tb_sifre" runat="server" CssClass="metinKutu" Text="1234"></asp:TextBox>
                     </div>
 
                     <div class="satir" style="margin-top:25px;">

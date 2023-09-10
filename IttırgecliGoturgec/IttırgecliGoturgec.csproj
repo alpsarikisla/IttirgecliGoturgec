@@ -91,6 +91,27 @@
     <Compile Include="YoneticiPanel\Giris.aspx.designer.cs">
       <DependentUpon>Giris.aspx</DependentUpon>
     </Compile>
+    <Compile Include="YoneticiPanel\KategoriDuzenle.aspx.cs">
+      <DependentUpon>KategoriDuzenle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YoneticiPanel\KategoriDuzenle.aspx.designer.cs">
+      <DependentUpon>KategoriDuzenle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YoneticiPanel\KategoriEkle.aspx.cs">
+      <DependentUpon>KategoriEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YoneticiPanel\KategoriEkle.aspx.designer.cs">
+      <DependentUpon>KategoriEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YoneticiPanel\KategoriListele.aspx.cs">
+      <DependentUpon>KategoriListele.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YoneticiPanel\KategoriListele.aspx.designer.cs">
+      <DependentUpon>KategoriListele.aspx</DependentUpon>
+    </Compile>
     <Compile Include="YoneticiPanel\YoneticiMaster.Master.cs">
       <DependentUpon>YoneticiMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -107,6 +128,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="YoneticiPanel\KategoriDuzenle.aspx" />
+    <Content Include="YoneticiPanel\KategoriEkle.aspx" />
+    <Content Include="YoneticiPanel\KategoriListele.aspx" />
     <Content Include="YoneticiPanel\YoneticiMaster.Master" />
   </ItemGroup>
   <ItemGroup>
