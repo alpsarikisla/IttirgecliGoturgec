@@ -6,6 +6,7 @@
 <head runat="server">
     <title></title>
     <link href="Assets/css/AnaStil.css" rel="stylesheet" />
+    <script src="Assets/ckeditor/ckeditor.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -38,7 +39,7 @@
                     <a href="Anasayfa.aspx">
                         <li>Makale Listele</li>
                     </a>
-                    <a href="Anasayfa.aspx">
+                    <a href="MakaleEkle.aspx">
                         <li>Makale Ekle</li>
                     </a>
                     <a href="Anasayfa.aspx">
@@ -52,6 +53,11 @@
             </div>
 
         </div>
+       
+        <script>
+            CKEDITOR.replace('ContentPlaceHolder1_tb_icerik');
+        </script>
     </form>
+
 </body>
 </html>

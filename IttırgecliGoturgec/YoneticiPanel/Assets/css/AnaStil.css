@@ -80,7 +80,16 @@ body {
     padding: 10px;
     border: 1px solid silver;
 }
-
+    .panelIcerik .IcerikSol
+    {
+        width:650px;
+        float:left;
+    }
+    .panelIcerik .IcerikSag {
+        width: 650px;
+        float: left;
+        padding-left:30px;
+    }
     .panelIcerik .satir {
         margin-top: 10px;
     }
@@ -93,7 +102,15 @@ body {
         border-radius: 7px;
         border: 1px solid silver;
     }
-
+    .panelIcerik .ddlKutu {
+        width: 100%;
+        font-size: 12pt;
+        padding: 7px;
+        margin-top: 10px;
+        border-radius: 7px;
+        border: 1px solid silver;
+        background-color:white;
+    }
     .panelIcerik .button {
         background-color: #F29544;
         color: white;

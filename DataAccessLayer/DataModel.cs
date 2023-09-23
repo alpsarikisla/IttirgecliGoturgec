@@ -197,5 +197,14 @@ namespace DataAccessLayer
         }
 
         #endregion
+
+        #region Makale Metotları
+
+        public bool MakaleEkle(Makale mak)
+        {
+            return true;
+        }
+
+        #endregion
     }
 }
