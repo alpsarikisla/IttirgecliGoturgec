@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/YoneticiPanel/YoneticiMaster.Master" AutoEventWireup="true" CodeBehind="MakaleEkle.aspx.cs" Inherits="IttırgecliGoturgec.YoneticiPanel.MakaleEkle" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/YoneticiPanel/YoneticiMaster.Master" AutoEventWireup="true" CodeBehind="MakaleEkle.aspx.cs" Inherits="IttırgecliGoturgec.YoneticiPanel.MakaleEkle" ValidateRequest="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -8,6 +8,12 @@
             <h3>Makale Ekle</h3>
         </div>
         <div class="panelIcerik">
+            <asp:Panel ID="pnl_basarili" runat="server" CssClass="basarili" Visible="false">
+                Makale Başarıyla Eklenmiştir
+            </asp:Panel>
+            <asp:Panel ID="pnl_hata" runat="server" CssClass="hata" Visible="false">
+                <asp:Label ID="lbl_mesaj" runat="server"></asp:Label>
+            </asp:Panel>
             <div class="IcerikSol">
                 <div class="satir">
                     <label>Kategori Seçiniz</label><br />

@@ -32,7 +32,7 @@
                             <%# Eval("Aciklama") %>
                         </td>
                         <td>
-                            <a href="KategoriDuzenle.aspx" class="tablobutton duzenle">Düzenle</a>
+                            <a href='KategoriDuzenle.aspx?kid=<%# Eval("ID") %>' class="tablobutton duzenle">Düzenle</a>
                            <asp:LinkButton ID="lbtn_sil" runat="server" CssClass="tablobutton sil" CommandName="sil" CommandArgument='<%# Eval("ID") %>'>Sil</asp:LinkButton>
                         </td>
                     </tr>
