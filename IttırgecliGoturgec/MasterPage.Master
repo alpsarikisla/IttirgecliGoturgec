@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="IttırgecliGoturgec.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Assets/css/Arayuz.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="anaTasiyici">
+        <div class="baslikTasiyici">
+            <div class="logo">
+               <a href="Default.aspx"> <img src="Assets/SayfaResimleri/logo.png" /></a>
+            </div>
+            <div class="uyePanel">
+                <a href="#">Uye Ol</a>
+                <a href="#">Giriş Yap</a>
+            </div>
+        </div>
+        <div style="clear: both"></div>
+        <div class="menuTasiyici">
+            <ul>
+                <asp:Repeater ID="rp_kategoriler" runat="server">
+                    <ItemTemplate>
+                        <a href="#">
+                            <li><%# Eval("Isim") %></li>
+                        </a>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </ul>
+            <div style="clear: both"></div>
+        </div>
+        <form id="form1" runat="server">
+            <div class="iceriktasiyici">
+                <div class="sol">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div class="sag">
+                    <a href="https://www.turhost.com/r/104820/hosting">
+                        <img src="Assets/SayfaResimleri/160x600.gif" /></a>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

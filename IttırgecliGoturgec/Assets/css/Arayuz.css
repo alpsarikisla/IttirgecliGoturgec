@@ -1,0 +1,78 @@
+﻿body {
+    font-family:Calibri;
+}
+.anaTasiyici{
+    width:1200px;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+    .anaTasiyici .baslikTasiyici .logo {
+        width: 250px;
+        float:left;
+    }
+    .anaTasiyici .baslikTasiyici .logo img {
+        width: 128px;
+    }
+        .anaTasiyici .baslikTasiyici .uyePanel {
+            margin-top:18px;
+            width: 150px;
+            float: right;
+        }
+            .anaTasiyici .baslikTasiyici .uyePanel a{
+                padding-left:10px;
+            }
+            .menuTasiyici {
+                color: #1b1b1b;
+                border-top: 1px solid silver;
+                border-bottom: 1px solid silver;
+            }
+.menuTasiyici ul
+{
+    list-style-type:none;
+    margin-top:0;
+}
+    .menuTasiyici ul a {
+        color: #1b1b1b;
+    }
+    .menuTasiyici ul a:hover li {
+       text-decoration:underline;
+    }
+    .menuTasiyici ul li {
+        float: left;
+        padding: 10px 20px;
+    }
+.iceriktasiyici
+{
+
+}
+.iceriktasiyici .sol{
+    width:980px;
+    float:left;
+}
+.iceriktasiyici .sag {
+    margin-top:20px;
+    width:200px;
+    float:right;
+}
+.makale
+{
+
+}
+.makale .baslik {
+}
+.makale .resim img
+{
+    width:975px;
+}
+    .makale .altbaslik {
+        color:gray;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-top: 1px solid silver;
+        border-bottom: 1px solid silver;
+    }
+    .makale .ozet {
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }

@@ -67,7 +67,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\css\Arayuz.css" />
+    <Content Include="Assets\SayfaResimleri\160x600.gif" />
+    <Content Include="Assets\SayfaResimleri\logo.png" />
+    <Content Include="Default.aspx" />
+    <Content Include="MakaleDetay.aspx" />
     <Content Include="MakaleResimleri\none.jpg" />
+    <Content Include="UyeGiris.aspx" />
+    <Content Include="UyeOl.aspx" />
     <Content Include="Web.config" />
     <Content Include="YoneticiPanel\Anasayfa.aspx" />
     <Content Include="YoneticiPanel\Assets\ckeditor\adapters\jquery.js" />
@@ -322,7 +329,42 @@
     <Content Include="YoneticiPanel\Assets\Resim\login_bg.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakaleDetay.aspx.cs">
+      <DependentUpon>MakaleDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakaleDetay.aspx.designer.cs">
+      <DependentUpon>MakaleDetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UyeGiris.aspx.cs">
+      <DependentUpon>UyeGiris.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UyeGiris.aspx.designer.cs">
+      <DependentUpon>UyeGiris.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UyeOl.aspx.cs">
+      <DependentUpon>UyeOl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UyeOl.aspx.designer.cs">
+      <DependentUpon>UyeOl.aspx</DependentUpon>
+    </Compile>
     <Compile Include="YoneticiPanel\Anasayfa.aspx.cs">
       <DependentUpon>Anasayfa.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -388,6 +430,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MasterPage.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
