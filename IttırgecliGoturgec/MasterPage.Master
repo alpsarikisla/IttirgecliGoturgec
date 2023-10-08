@@ -10,30 +10,36 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <div class="anaTasiyici">
-        <div class="baslikTasiyici">
-            <div class="logo">
-               <a href="Default.aspx"> <img src="Assets/SayfaResimleri/logo.png" /></a>
+    <form id="form1" runat="server">
+        <div class="anaTasiyici">
+            <div class="baslikTasiyici">
+                <div class="logo">
+                    <a href="Default.aspx">
+                        <img src="Assets/SayfaResimleri/logo.png" /></a>
+                </div>
+                <asp:Panel ID="pnl_girisyok" runat="server" CssClass="uyePanel">
+                    <a href="UyeOl.aspx">Uye Ol</a>
+                    <a href="UyeGiris.aspx">Giriş Yap</a>
+                </asp:Panel>
+                <asp:Panel ID="pnl_girisvar" runat="server" CssClass="uyePanel">
+                    Merhaba <asp:LinkButton ID="lbtn_uye" runat="server" OnClick="lbtn_uye_Click"></asp:LinkButton>
+                    <asp:LinkButton ID="lbtn_cikis" runat="server" OnClick="lbtn_cikis_Click">Çıkış</asp:LinkButton>
+                </asp:Panel>
             </div>
-            <div class="uyePanel">
-                <a href="UyeOl.aspx">Uye Ol</a>
-                <a href="UyeGiris.aspx">Giriş Yap</a>
-            </div>
-        </div>
-        <div style="clear: both"></div>
-        <div class="menuTasiyici">
-            <ul>
-                <asp:Repeater ID="rp_kategoriler" runat="server">
-                    <ItemTemplate>
-                        <a href="#">
-                            <li><%# Eval("Isim") %></li>
-                        </a>
-                    </ItemTemplate>
-                </asp:Repeater>
-            </ul>
             <div style="clear: both"></div>
-        </div>
-        <form id="form1" runat="server">
+            <div class="menuTasiyici">
+                <ul>
+                    <asp:Repeater ID="rp_kategoriler" runat="server">
+                        <ItemTemplate>
+                            <a href="#">
+                                <li><%# Eval("Isim") %></li>
+                            </a>
+                        </ItemTemplate>
+                    </asp:Repeater>
+                </ul>
+                <div style="clear: both"></div>
+            </div>
+
             <div class="iceriktasiyici">
                 <div class="sol">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -45,8 +51,9 @@
                 </div>
 
             </div>
-        </form>
-    </div>
+        </div>
+    </form>
+
 
 </body>
 </html>

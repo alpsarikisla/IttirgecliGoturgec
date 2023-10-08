@@ -23,11 +23,27 @@ namespace IttırgecliGoturgec
                 ltrl_kategori.Text = m.Kategori;
                 ltrl_yazar.Text = m.Yazar;
                 img_Resim.ImageUrl = "~/MakaleResimleri/" + m.KapakResim;
+
+                if (Session["uye"] != null)
+                {
+                    pnl_girisvar.Visible = true;
+                    pnl_girisyok.Visible = false;
+                }
+                else
+                {
+                    pnl_girisvar.Visible = false;
+                    pnl_girisyok.Visible = true;
+                }
             }
             else
             {
                 Response.Redirect("Default.aspx");
             }
+        }
+
+        protected void btn_yorumYap_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

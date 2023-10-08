@@ -15,6 +15,29 @@ namespace IttırgecliGoturgec
         {
             rp_kategoriler.DataSource = dm.KategoriListele();
             rp_kategoriler.DataBind();
+            if (Session["uye"] == null)
+            {
+                pnl_girisyok.Visible = true;
+                pnl_girisvar.Visible = false;
+            }
+            else
+            {
+                Uye u = Session["uye"] as Uye;
+                lbtn_uye.Text = u.KullaniciAdi;
+                pnl_girisyok.Visible = false;
+                pnl_girisvar.Visible = true;
+            }
+        }
+
+        protected void lbtn_uye_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Profil.aspx");
+        }
+
+        protected void lbtn_cikis_Click(object sender, EventArgs e)
+        {
+            Session["uye"] = null;
+            Response.Redirect("Default.aspx");
         }
     }
 }
