@@ -16,8 +16,8 @@
                <a href="Default.aspx"> <img src="Assets/SayfaResimleri/logo.png" /></a>
             </div>
             <div class="uyePanel">
-                <a href="#">Uye Ol</a>
-                <a href="#">Giriş Yap</a>
+                <a href="UyeOl.aspx">Uye Ol</a>
+                <a href="UyeGiris.aspx">Giriş Yap</a>
             </div>
         </div>
         <div style="clear: both"></div>

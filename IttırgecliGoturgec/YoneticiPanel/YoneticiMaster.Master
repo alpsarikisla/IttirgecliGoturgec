@@ -42,7 +42,7 @@
                     <a href="MakaleEkle.aspx">
                         <li>Makale Ekle</li>
                     </a>
-                    <a href="Anasayfa.aspx">
+                    <a href="UyeListele.aspx">
                         <li>Üyeler</li>
                     </a>
                 </ul>

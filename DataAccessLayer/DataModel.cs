@@ -73,6 +73,56 @@ namespace DataAccessLayer
             
         }
 
+        public Uye UyeGiris(string mail, string sifre)
+        {
+            try
+            {
+                cmd.CommandText = "SELECT COUNT(*) FROM Uyeler WHERE Mail=@mail AND Sifre=@sfr";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@mail", mail);
+                cmd.Parameters.AddWithValue("@sfr", sifre);
+                con.Open();
+                int sayi = Convert.ToInt32(cmd.ExecuteScalar());
+                if (sayi > 0)
+                {
+                    cmd.CommandText = "SELECT * FROM Uyeler WHERE Mail=@mail AND Sifre=@sfr";
+                    cmd.Parameters.Clear();
+                    cmd.Parameters.AddWithValue("@mail", mail);
+                    cmd.Parameters.AddWithValue("@sfr", sifre);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    Uye y = new Uye();
+                    while (reader.Read())
+                    {
+                        y.ID = reader.GetInt32(0);
+                        y.Isim = reader.GetString(1);
+                        y.Soyisim = reader.GetString(2);
+                        y.KullaniciAdi = reader.GetString(3);
+                        y.Mail = reader.GetString(4);
+                        y.Sifre = reader.GetString(5);
+                        y.UyelikTarihi = reader.GetDateTime(6);
+                        y.Aktif = reader.GetBoolean(7);
+                        y.Silinmis = reader.GetBoolean(8);
+                    }
+                    return y;
+                }
+                else
+                {
+                    return null;
+                }
+
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
+
         #endregion
 
         #region Kategori Metotları
@@ -360,6 +410,74 @@ namespace DataAccessLayer
                 cmd.Parameters.AddWithValue("@id", id);
                 con.Open();
                 cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        #endregion
+
+        #region Üye Metotları
+
+        public bool UyeOl(Uye model)
+        {
+           
+            try
+            {
+                cmd.CommandText = "INSERT INTO Uyeler(Isim,Soyisim,KullaniciAdi,Mail,Sifre,UyelikTarihi,Aktif,Silinmis) VALUES(@isim,@soyisim,@kullaniciAdi,@mail,@sifre,@uyelikTarihi,@aktif,@silinmis)";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@isim", model.Isim);
+                cmd.Parameters.AddWithValue("@soyisim", model.Soyisim);
+                cmd.Parameters.AddWithValue("@kullaniciAdi", model.KullaniciAdi);
+                cmd.Parameters.AddWithValue("@mail", model.Mail);
+                cmd.Parameters.AddWithValue("@sifre", model.Sifre);
+                cmd.Parameters.AddWithValue("@uyelikTarihi", model.UyelikTarihi);
+                cmd.Parameters.AddWithValue("@aktif", model.Aktif);
+                cmd.Parameters.AddWithValue("@silinmis", model.Silinmis);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public List<Uye> UyeListele()
+        {
+            try
+            {
+                List<Uye> uyeler = new List<Uye>();
+                cmd.CommandText = "SELECT ID, Isim, Soyisim, KullaniciAdi, Mail, UyelikTarihi, Aktif, Silinmis FROM Uyeler";
+                cmd.Parameters.Clear();
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Uye u = new Uye();
+                    u.ID = reader.GetInt32(0);
+                    u.Isim = reader.GetString(1);
+                    u.Mail = reader.GetString(4);
+                    u.Soyisim = reader.GetString(2);
+                    u.UyelikTarihi = reader.GetDateTime(5);
+                    u.UyelikTarihStr = reader.GetDateTime(5).ToShortDateString();
+                    u.KullaniciAdi = reader.GetString(3);
+                    u.Aktif = reader.GetBoolean(6);
+                    u.Silinmis = reader.GetBoolean(7);
+                    uyeler.Add(u);
+                }
+                return uyeler;
+            }
+            catch
+            {
+                return null;
             }
             finally
             {

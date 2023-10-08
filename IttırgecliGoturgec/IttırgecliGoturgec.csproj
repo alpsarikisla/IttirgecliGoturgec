@@ -421,6 +421,13 @@
     <Compile Include="YoneticiPanel\MakaleListele.aspx.designer.cs">
       <DependentUpon>MakaleListele.aspx</DependentUpon>
     </Compile>
+    <Compile Include="YoneticiPanel\UyeListele.aspx.cs">
+      <DependentUpon>UyeListele.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YoneticiPanel\UyeListele.aspx.designer.cs">
+      <DependentUpon>UyeListele.aspx</DependentUpon>
+    </Compile>
     <Compile Include="YoneticiPanel\YoneticiMaster.Master.cs">
       <DependentUpon>YoneticiMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -444,6 +451,7 @@
     <Content Include="YoneticiPanel\MakaleDuzenle.aspx" />
     <Content Include="YoneticiPanel\MakaleEkle.aspx" />
     <Content Include="YoneticiPanel\MakaleListele.aspx" />
+    <Content Include="YoneticiPanel\UyeListele.aspx" />
     <Content Include="YoneticiPanel\YoneticiMaster.Master" />
     <Content Include="YoneticiPanel\Assets\ckeditor\CHANGES.md" />
     <Content Include="YoneticiPanel\Assets\ckeditor\LICENSE.md" />

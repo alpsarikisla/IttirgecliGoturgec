@@ -76,3 +76,44 @@
         margin-top: 20px;
         margin-bottom: 40px;
     }
+.basarili {
+    background-color: #33A6A6;
+    border: 1px solid #1a6f6f;
+    color: white;
+    padding: 12px;
+    border-radius: 7px;
+}
+.basarisiz {
+    background-color: #ffcece;
+    border: 1px solid #820b0b;
+    color: #820b0b;
+    padding: 12px;
+    border-radius: 7px;
+}
+.uyelikPanel {
+    border: 1px solid silver;
+    padding: 10px 50px;
+    border-radius: 5px;
+    margin-top:20px;
+}
+.satir
+{
+    padding-bottom:20px;
+}
+    .satir .metinKutu {
+        width:98%;
+        padding:10px;
+        border-radius:5px;
+        border:1px solid silver;
+    }
+
+.uyeButton {
+    padding: 7px 55px;
+    background-color: forestgreen;
+    color: white;
+    border-radius: 5px;
+    text-decoration:none;
+}
+    .uyeButton:hover {
+        background-color: darkgreen;
+    }
