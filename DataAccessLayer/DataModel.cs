@@ -486,5 +486,80 @@ namespace DataAccessLayer
         }
 
         #endregion
+
+        #region Yorum Metotları
+
+        public List<Yorum> YorumListele()
+        {
+            List<Yorum> yorumlar = new List<Yorum>();
+            try
+            {
+                cmd.CommandText = "SELECT Y.ID, Y.MakaleID, M.Baslik, Y.UyeID, U.KullaniciAdi, Y.YorumTarihi,Y.Icerik,Y.Onayli FROM Yorumlar AS Y JOIN Makaleler AS M ON Y.MakaleID=M.ID JOIN Uyeler AS U ON Y.UyeID = U.ID";
+                cmd.Parameters.Clear();
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Yorum yorum = new Yorum();
+                    yorum.ID = reader.GetInt32(0);
+                    yorum.MakaleID = reader.GetInt32(1);
+                    yorum.Makale = reader.GetString(2);
+                    yorum.UyeID = reader.GetInt32(3);
+                    yorum.Uye = reader.GetString(4);
+                    yorum.YorumTarihi = reader.GetDateTime(5);
+                    yorum.Icerik = reader.GetString(6);
+                    yorum.Onayli = reader.GetBoolean(7);
+                    yorumlar.Add(yorum);
+                }
+                return yorumlar;
+
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public List<Yorum> YorumListele(int MakaleID)
+        {
+            List<Yorum> yorumlar = new List<Yorum>();
+            try
+            {
+                cmd.CommandText = "SELECT Y.ID, Y.MakaleID, M.Baslik, Y.UyeID, U.KullaniciAdi, Y.YorumTarihi,Y.Icerik,Y.Onayli FROM Yorumlar AS Y JOIN Makaleler AS M ON Y.MakaleID=M.ID JOIN Uyeler AS U ON Y.UyeID = U.ID WHERE Y.MakaleID=@id AND Y.Onayli = 1";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", MakaleID);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Yorum yorum = new Yorum();
+                    yorum.ID = reader.GetInt32(0);
+                    yorum.MakaleID = reader.GetInt32(1);
+                    yorum.Makale = reader.GetString(2);
+                    yorum.UyeID = reader.GetInt32(3);
+                    yorum.Uye = reader.GetString(4);
+                    yorum.YorumTarihi = reader.GetDateTime(5);
+                    yorum.Icerik = reader.GetString(6);
+                    yorum.Onayli = reader.GetBoolean(7);
+                    yorumlar.Add(yorum);
+                }
+                return yorumlar;
+
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        #endregion
     }
 }

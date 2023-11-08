@@ -47,4 +47,17 @@
         </asp:Panel>
 
     </div>
+    <div class="yorumpanel">
+        <asp:Repeater ID="rp_yorumlar" runat="server">
+            <ItemTemplate>
+                <div class="yorum">
+                    Yazar : <%# Eval("Uye") %> Tarih : <%# Eval("YorumTarihi") %>
+
+                </div>
+                <div class="icerik">
+                     <%# Eval("Icerik") %>
+                </div>
+            </ItemTemplate>
+        </asp:Repeater>
+    </div>
 </asp:Content>

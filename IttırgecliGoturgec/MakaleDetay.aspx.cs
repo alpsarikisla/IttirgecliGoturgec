@@ -24,6 +24,9 @@ namespace IttırgecliGoturgec
                 ltrl_yazar.Text = m.Yazar;
                 img_Resim.ImageUrl = "~/MakaleResimleri/" + m.KapakResim;
 
+                rp_yorumlar.DataSource = dm.YorumListele(ID);
+                rp_yorumlar.DataBind();
+
                 if (Session["uye"] != null)
                 {
                     pnl_girisvar.Visible = true;
